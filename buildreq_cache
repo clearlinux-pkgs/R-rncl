@@ -1,4 +1,8 @@
 0.8.3
 R-Rcpp
 R-cli
+R-hms
+R-pkgconfig
+R-prettyunits
 R-progress
+R-rlang

@@ -4,16 +4,24 @@
 #
 Name     : R-rncl
 Version  : 0.8.3
-Release  : 10
+Release  : 11
 URL      : https://cran.r-project.org/src/contrib/rncl_0.8.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rncl_0.8.3.tar.gz
 Summary  : An Interface to the Nexus Class Library
 Group    : Development/Tools
 License  : BSD-2-Clause
 Requires: R-rncl-lib = %{version}-%{release}
+Requires: R-hms
+Requires: R-pkgconfig
+Requires: R-prettyunits
+Requires: R-rlang
 BuildRequires : R-Rcpp
 BuildRequires : R-cli
+BuildRequires : R-hms
+BuildRequires : R-pkgconfig
+BuildRequires : R-prettyunits
 BuildRequires : R-progress
+BuildRequires : R-rlang
 BuildRequires : buildreq-R
 
 %description
@@ -41,10 +49,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552865228
+export SOURCE_DATE_EPOCH=1552961522
 
 %install
-export SOURCE_DATE_EPOCH=1552865228
+export SOURCE_DATE_EPOCH=1552961522
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
