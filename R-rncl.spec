@@ -4,7 +4,7 @@
 #
 Name     : R-rncl
 Version  : 0.8.3
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/rncl_0.8.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rncl_0.8.3.tar.gz
 Summary  : An Interface to the Nexus Class Library
@@ -16,12 +16,16 @@ Requires: R-progress
 BuildRequires : R-Rcpp
 BuildRequires : R-progress
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
-of NEXUS, Newick and other phylogenetic tree file formats. It provides
-    elements of the file that can be used to build phylogenetic objects
-    such as ape's 'phylo' or phylobase's 'phylo4(d)'. This functionality
-    is demonstrated with 'read_newick_phylo()' and 'read_nexus_phylo()'.
+---
+title: An R interface to the NEXUS Class Library
+---
+[![Build Status](https://travis-ci.org/fmichonneau/rncl.svg)](https://travis-ci.org/fmichonneau/rncl)
+[![Build status](https://ci.appveyor.com/api/projects/status/bfcjqt83esp0nnak)](https://ci.appveyor.com/project/fmichonneau/rncl)
+[![Coverage Status](https://coveralls.io/repos/fmichonneau/rncl/badge.svg)](https://coveralls.io/r/fmichonneau/rncl)
+[![Research software impact](http://depsy.org/api/package/cran/rncl/badge.svg)](http://depsy.org/package/r/rncl)
 
 %package lib
 Summary: lib components for the R-rncl package.
@@ -39,10 +43,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1569373016
+export SOURCE_DATE_EPOCH=1571894048
 
 %install
-export SOURCE_DATE_EPOCH=1569373016
+export SOURCE_DATE_EPOCH=1571894048
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
