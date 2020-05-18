@@ -4,7 +4,7 @@
 #
 Name     : R-rncl
 Version  : 0.8.4
-Release  : 21
+Release  : 22
 URL      : https://cran.r-project.org/src/contrib/rncl_0.8.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rncl_0.8.4.tar.gz
 Summary  : An Interface to the Nexus Class Library
@@ -18,13 +18,10 @@ BuildRequires : R-progress
 BuildRequires : buildreq-R
 
 %description
----
-title: An R interface to the NEXUS Class Library
----
-[![Build Status](https://travis-ci.org/fmichonneau/rncl.svg)](https://travis-ci.org/fmichonneau/rncl)
-[![Build status](https://ci.appveyor.com/api/projects/status/bfcjqt83esp0nnak)](https://ci.appveyor.com/project/fmichonneau/rncl)
-[![Coverage Status](https://coveralls.io/repos/fmichonneau/rncl/badge.svg)](https://coveralls.io/r/fmichonneau/rncl)
-[![Research software impact](http://depsy.org/api/package/cran/rncl/badge.svg)](http://depsy.org/package/r/rncl)
+of NEXUS, Newick and other phylogenetic tree file formats. It provides
+    elements of the file that can be used to build phylogenetic objects
+    such as ape's 'phylo' or phylobase's 'phylo4(d)'. This functionality
+    is demonstrated with 'read_newick_phylo()' and 'read_nexus_phylo()'.
 
 %package lib
 Summary: lib components for the R-rncl package.
@@ -36,21 +33,22 @@ lib components for the R-rncl package.
 
 %prep
 %setup -q -c -n rncl
+cd %{_builddir}/rncl
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581345554
+export SOURCE_DATE_EPOCH=1589760649
 
 %install
-export SOURCE_DATE_EPOCH=1581345554
+export SOURCE_DATE_EPOCH=1589760649
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
