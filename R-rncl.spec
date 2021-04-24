@@ -4,7 +4,7 @@
 #
 Name     : R-rncl
 Version  : 0.8.4
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/rncl_0.8.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rncl_0.8.4.tar.gz
 Summary  : An Interface to the Nexus Class Library
