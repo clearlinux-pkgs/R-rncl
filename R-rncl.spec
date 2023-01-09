@@ -4,7 +4,7 @@
 #
 Name     : R-rncl
 Version  : 0.8.7
-Release  : 42
+Release  : 43
 URL      : https://cran.r-project.org/src/contrib/rncl_0.8.7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rncl_0.8.7.tar.gz
 Summary  : An Interface to the Nexus Class Library
@@ -17,9 +17,6 @@ BuildRequires : R-Rcpp
 BuildRequires : R-ape
 BuildRequires : R-progress
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 of NEXUS, Newick and other phylogenetic tree file formats. It provides
@@ -44,10 +41,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1673291442
+export SOURCE_DATE_EPOCH=1673292872
 
 %install
-export SOURCE_DATE_EPOCH=1673291442
+export SOURCE_DATE_EPOCH=1673292872
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
